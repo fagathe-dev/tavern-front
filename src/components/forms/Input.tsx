@@ -13,6 +13,7 @@ export interface InputProps extends Omit<FieldProps, "onChange">, StylingProps {
   type?: Type;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  required?: boolean;
 }
 
 const handleSize = ({ size }: InputProps) => {
@@ -106,6 +107,7 @@ const Input = ({
   onChange,
   style,
   value,
+  required = false,
 }: InputProps) => (
   <StyledInput
     id={id}
@@ -120,6 +122,7 @@ const Input = ({
     autocomplete={autocomplete}
     disabled={disabled}
     value={value}
+    required={required}
   />
 );
 

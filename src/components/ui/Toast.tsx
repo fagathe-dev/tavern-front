@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { StylingProps, TitleProps } from "../../type/ui.type";
 import { theme } from "../../theme";
 
-type Type = "error" | "success" | "warning" | "primary" | "default";
+export type Type = "error" | "success" | "warning" | "primary" | "default";
 
-interface ToastProps extends StylingProps, TitleProps {
+export interface ToastProps extends StylingProps, TitleProps {
   type?: Type;
 }
 

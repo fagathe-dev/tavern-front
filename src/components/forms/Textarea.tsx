@@ -12,6 +12,7 @@ interface TextareaProps extends StylingProps, Omit<FieldProps, "onChange"> {
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   autocomplete?: boolean;
   autoFocus?: boolean;
+  required?: boolean;
 }
 
 const handleState = ({ state }: TextareaProps) => {
@@ -81,6 +82,7 @@ const Textarea = ({
   name,
   rows = 4,
   resize = "vertical",
+  required = false,
 }: TextareaProps) => (
   <StyledTextarea
     resize={resize}
@@ -95,6 +97,7 @@ const Textarea = ({
     rows={rows}
     value={value}
     state={state}
+    required={required}
   >
     {placeholder ?? value}
   </StyledTextarea>

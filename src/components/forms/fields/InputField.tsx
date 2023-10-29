@@ -19,6 +19,7 @@ const InputField = ({
   state = "default",
   placeholder,
   autoFocus = false,
+  required = false,
   autocomplete,
   label,
   message,
@@ -58,6 +59,7 @@ const InputField = ({
           style={style}
           size={size}
           disabled={disabled}
+          required={required}
         />
         {message && <Small color={state}>{message}</Small>}
       </StyledField>

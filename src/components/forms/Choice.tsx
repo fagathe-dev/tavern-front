@@ -10,6 +10,7 @@ export interface ChoiceProps
   checked?: boolean;
   size?: Extract<Size, "s" | "m" | "l">;
   optional?: boolean;
+  required?: boolean;
 }
 
 const handleState = ({ state }: ChoiceProps) => {
@@ -63,6 +64,7 @@ const Choice = ({
   disabled,
   style,
   optional,
+  required,
 }: ChoiceProps) => (
   <StyledChoice
     optional={optional}
@@ -75,6 +77,7 @@ const Choice = ({
     size={size}
     checked={checked}
     style={style}
+    required={required}
   />
 );
 

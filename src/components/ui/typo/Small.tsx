@@ -22,8 +22,16 @@ const Small = ({
   align = "start",
   style,
   children,
+  cx = [],
+  id,
 }: PropsWithChildren<SmallProps>) => (
-  <StyledSmall style={style} align={align} color={color}>
+  <StyledSmall
+    style={style}
+    id={id}
+    className={cx.join(" ")}
+    align={align}
+    color={color}
+  >
     {children}
   </StyledSmall>
 );
